@@ -1,0 +1,349 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: 'Merriweather Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+}
+
+body {
+    background: var(--body-bg-color);
+    padding: 40px;
+
+    display: grid;
+    grid-template-areas:
+        "aside main"
+        "footer footer";
+}
+
+h1 {
+    font-size: 23px;
+}
+
+h2 {
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+h1, h2, p, a, li, span, time {
+    color: var(--text-color);
+}
+
+
+
+.box {
+    width: 348px;
+
+    background-color: var(--bg-cards);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+/*
+    Style Header
+*/
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 292px;
+}
+
+#profile figure {
+    display: flex;
+    flex-flow: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+figure img {
+    width: 123px;
+    border-radius: 50%;
+    border: 2px solid #00FF00;
+
+}
+
+#profile figcaption p {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*
+    Style Aside
+*/
+aside {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+
+    grid-area: aside;
+}
+
+aside section:nth-child(2) {
+    display: flex;
+    padding: 30px 40px;
+}
+
+ul#contact {
+    display: flex;
+    flex-flow: column;
+    gap: 28px;
+
+    font-size: 12px;
+}
+
+ul#contact li img, .onix-svg {
+    filter: invert(50%) sepia(4%) saturate(2113%) hue-rotate(209deg) brightness(102%) contrast(91%);
+}
+
+ul#contact li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+ul#contact li a:hover {
+    color: #fff;
+}
+
+section#tech ul {
+    display: flex;
+    padding: 20px 30px;
+    gap: 15px;
+}
+
+section#tech ul li {
+    width: 86px;
+    height: 24px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+
+    background-color: var(--bg-techs);
+    border-radius: 20px;
+    padding: 10px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tech ul li  a {
+    color: #000;
+}
+
+.list {
+    padding: 0px 40px 30px 0px;
+}
+
+.list ul {
+    margin-left: 50px;
+}
+
+.list ul li {
+    margin-top: 20px;
+    list-style: disc;
+}
+
+.list ul li p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.list ul li span {
+    display: block;
+    font-size: 12px;
+}
+
+
+
+/*
+    Style Main
+*/
+main {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    grid-area: main;
+
+    width: calc(952px - 40px);
+    padding-left: 60px;
+}
+
+main .box {
+    width: 100%;
+    padding: 30px;
+}
+
+.my-project {
+    display: flex;
+    height: 86px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.my-project span {
+    font-size: 14px;
+}
+
+.my-project div {
+    height: 86px;
+}
+
+#onix {
+    display: flex;
+    gap: 30px;
+}
+
+#onix div {
+    padding-right: 10px;
+}
+
+#onix div span {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#onix div p {
+    margin-top: 14px;
+    font-size: 12px;
+}
+
+#onix div div.onix-svg {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    gap: 8px;
+
+    font-size: 14px;
+    
+}
+
+#onix div div.onix-svg img {
+    width: 20px;
+}
+
+#onix div div.onix-svg #js {
+    margin-left: 130px;
+}
+
+#information {
+    display: flex;
+    gap: 20px;
+}
+
+#information figure img {
+    border: none;
+}
+
+#information div p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#information div time, #information div span {
+    font-size: 14px;
+}
+
+#information div p:nth-child(3) {
+    font-size: 16px;   
+    margin-top: 28px;
+    margin-bottom: 11px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+    grid-area: footer;
+}
+
+
+/*
+    Animation
+*/
+
+aside .box {
+    animation: fromLeft .6s backwards;
+}
+
+aside section:nth-child(2) {
+    animation-delay: .7s;
+}
+
+aside section:nth-child(3) {
+    animation-delay: 1.14s;
+}
+
+aside section:nth-child(4) {
+    animation-delay: 2s;
+}
+
+aside section:nth-child(5) {
+    animation-delay: 2.7s;
+}
+
+main .animation {
+    animation: fromBottom .3s backwards;
+}
+
+main div:nth-child(1) {
+    animation-delay: .8s;
+}
+
+main div:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+main div:nth-child(3) {
+    animation-delay: 2s;
+}
+
+main div:nth-child(4) {
+    animation-delay: 2.4s;
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
